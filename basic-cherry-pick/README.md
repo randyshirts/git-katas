@@ -26,16 +26,16 @@ As you can see the `feature` branch and the `master` branch have progressed with
           \
             E - F - G - H feature
 
-1. Use `git log --decorate --oneline --graph --all` to look at the history
+1. Use `git log --oneline --graph --all` to look at the history
 2. Use `cat` to view the content of `names.txt`. This file is changed in commit F
 3. Use `cat` to view the content of `sentence.txt`. This file is changed in commit G
 4. Use `git cherry-pick <commit_hash_F>` to cherry pick just the F commit onto your branch
-5. Use `git log --decorate --oneline` to see the change to the history and that commit F should now be the newest commit on the master branch
+5. Use `git log --oneline` to see the change to the history and that commit F should now be the newest commit on the master branch
 6. Use `cat` to view the content of `names.txt` look how it has now changed!
 7. Use `git reset --hard HEAD^` to delete that cherry picking from the history so that we can now try again and cherry pick a range of commits
-8. Use `git log --decorate --oneline --graph --onelinecoda` to check the the cherry picked commit is now removed from the branch
+8. Use `git log --oneline --graph --onelinecoda` to check the the cherry picked commit is now removed from the branch
 9. We are now essentially back to where we began, now use `git cherry-pick <commit_hash_F>^..<commit_hash_G>` to cherry pick the range of commits from F to G (the two commits). Pay close attention and do not forget the caret `^` symbol after the first commit hash (see the section *Useful Note* below to understand why this is needed)
-10. Use `git log --decorate --oneline --graph --oneline` to view the history
+10. Use `git log --oneline --graph --oneline` to view the history
 11. Use `cat` to view the contents of `names.txt` and `sentence.txt` look how they have changed!
 12. How many commits were added due to the cherry pick?
 
@@ -59,4 +59,4 @@ Reference: https://git-scm.com/docs/git-cherry-pick
 ## Useful commands
 - `git cherry-pick <ref>`
 - `git reset --hard <ref>`
-- `git log --decorate --oneline --graph --all`
+- `git log --oneline --graph --all`
